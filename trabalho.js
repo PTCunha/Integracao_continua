@@ -1,5 +1,3 @@
-let nome
-
 export function geradorDeTagsDeIdentificacao(nome){
     return nome.toUpperCase()
 }
