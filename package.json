@@ -2,8 +2,13 @@
   "name": "trabalho-final",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "jest --config jest.config.js", 
+    "test:mutation": "stryker run", 
+    "e2e": "playwright test --config playwright.config.js", 
+    "test:all": "yarn test && yarn e2e", 
+    "start:app": "node server.js" 
   },
   "keywords": [],
   "author": "",

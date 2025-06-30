@@ -1,0 +1,42 @@
+{
+  "name": "robo-coasters-example",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "An example for Mutation Testing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stryker-mutator/robo-coasters-example"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint:ts && npm run lint:format",
+    "lint:ts": "tsc -b jsconfig.json",
+    "lint:format": "prettier --check --ignore-path .gitignore .",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:mutation": "npx stryker run",
+    "start": "lite-server",
+    "e2e": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.27.7",
+    "@babel/preset-env": "^7.27.2",
+    "@playwright/test": "^1.53.1",
+    "@stryker-mutator/core": "6.1.2",
+    "@stryker-mutator/jest-runner": "^8.5.0",
+    "@stryker-mutator/karma-runner": "^8.6.0",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^22.7.4",
+    "babel-jest": "^30.0.2",
+    "jest": "^30.0.3",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^26.1.0",
+    "lite-server": "^2.6.1",
+    "prettier": "^3.2.4",
+    "stryker-cli": "^1.0.2",
+    "typescript": "^5.3.3",
+    "whatwg-fetch": "^3.6.20"
+  }
+}
