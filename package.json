@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest", 
+    "test": "jest --config jest.config.js", 
     "test:mutation": "stryker run", 
-    "e2e": "playwright", 
+    "e2e": "npx playwright test --config playwright.config.js", 
     "test:all": "yarn test && yarn e2e", 
     "start:app": "node server.js" 
   },
@@ -15,6 +15,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "mocha": "^11.5.0"
+    "mocha": "^11.5.0",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@playwright/test": "^1.44.1",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jsdom": "^24.1.0",
+    "stryker-cli": "^1.2.0"
   }
 }
